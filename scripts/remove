@@ -31,9 +31,8 @@ ynh_script_progression --message="Removing system configurations related to $app
 
 ynh_remove_nginx_config
 
-rm  -R -f $path/
-rmdir  $path
-rmdir  $path_temp
+ynh_secure_remove $path
+ynh_secure_remove $path_temp
 
 #=================================================
 # END OF SCRIPT
