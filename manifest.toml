@@ -2,26 +2,26 @@ packaging_format = 2
 
 id = "webdav"
 name = "Webdav Yunohost"
-description.en = "Create your own Webdav server"
-description.fr = "Configuration d'un serveur Webdav'"
+description.en = "Configure your own Webdav server"
+description.fr = "Configuration d'un serveur Webdav"
 
 version = "1.0~ynh1"
 
 maintainers = ["marc_flender"]
 
 [upstream]
-# NB: Only the "license" key is mandatory. Remove entries for which there's no relevant data
-license = "free"
-website = "https://github.com/Marc-Flender/webdav_ynh"
-# FIXME: optional but recommended (or remove if irrelevant / not applicable). This is meant to be an URL where people can financially support this app, especially when its development is based on volunteers and/or financed by its community. YunoHost may later advertise it in the webadmin.
+license = "GPL-3.0-only"
+code = "https://github.com/Marc-Flender/webdav_ynh"
+admindoc="https://github.com/Marc-Flender/webdav_ynh"
+userdoc ="https://github.com/Marc-Flender/webdav_ynh"
 
 [integration]
-yunohost = ">= 1.0.0"
+yunohost = ">= 2.0.0"
 architectures = "all"
-multi_instance = true
+multi_instance = false
 ldap = "true" 
 sso = "true"
-disk = "100k"
+disk = "100M"
 ram.build = "100k"
 ram.runtime = "100k"
 
@@ -33,60 +33,34 @@ ram.runtime = "100k"
     [install.path]
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "path"
-    default = "/example"
+    default = "/webdav"
 
-    [install.init_main_permission]
+    #[install.init_main_permission]
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     # This won't be saved as setting and will instead be used to initialize the SSOwat permission
-    type = "group"
-    default = "visitors"
-
-    [install.language]
-    ask.en = "Choose the application language"
-    ask.fr = "Choisissez la langue de l'application"
-    type = "string"
-    choices = ["fr", "en"]
-    default = "fr"
-
-    [install.admin]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    type = "user"
-
-    [install.password]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    # Note that user-provided passwords questions are not automatically saved as setting
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
-    type = "password"
+    #type = "group"
+    #default = "all_users"
 
 [resources]
+	# see https://yunohost.org/fr/packaging_apps_resources
     # See the packaging documentation for the full set
     # of explanation regarding the behavior and properties for each of those
-
-    [resources.system_user]
-    # This will provision/deprovision a unix system user
 
     [resources.install_dir]
     # This will create/remove the install dir as /var/www/$app
     # and store the corresponding setting $install_dir
-
-    [resources.data_dir]
-    # This will create/remove the data dir as /home/yunohost.app/$app
-    # and store the corresponding setting $data_dir
+    owner = "www-data"
+    group= "www-data"
 
     [resources.permissions]
     # This will configure SSOwat permission for $domain/$path/
     # The initial allowed group of user is configured via the init_main_permission question (public=visitors, private=all_users)
     main.url = "/"
-
-    [resources.ports]
-    # This will pick a random port for reverse-proxying and store it as the $port setting 
-
-    [resources.apt]
-    # This will automatically install/uninstall the following apt packages
-    # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
-    packages = "deb1, deb2, php8.0-foo, php8.0-bar"
-
-    [resources.database]
-    # This will automatically provision/deprovison a mysql DB and store the corresponding credentials in settings $db_user, $db_name, $db_pwd
-    type = "mysql"
+    show_tile="true"
+    auth_header="true"
+	allowed="all_users"
+	
+    #	[resources.data_dir]
+    #	dir="/var/www/$app_temp"
+    #    owner = "www-data"
+    #    group= "www-data"

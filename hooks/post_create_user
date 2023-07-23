@@ -1,0 +1,5 @@
+#!/bin/bash
+
+user="$1"
+
+	..scripts/actions/create_user $u

@@ -25,37 +25,15 @@ source /usr/share/yunohost/helpers
 #=================================================
 # REMOVE SYSTEM CONFIGURATIONS
 #=================================================
-# REMOVE SYSTEMD SERVICE 
-#=================================================
 
 ynh_script_progression --message="Removing system configurations related to $app..." --weight=1
 
-# This should be a symetric version of what happens in the install script
-
-# Remove the service from the list of services known by YunoHost (added from `yunohost service add`)
-if ynh_exec_warn_less yunohost service status $app >/dev/null
-then
-	ynh_script_progression --message="Removing $app service integration..." --weight=1
-	yunohost service remove $app
-fi
-
-ynh_remove_systemd_config
 
 ynh_remove_nginx_config
 
-ynh_remove_fpm_config
-
-ynh_remove_logrotate
-
-ynh_remove_fail2ban_config
-
-# Remove other various files specific to the app... such as :
-
-ynh_secure_remove --file="/etc/cron.d/$app"
-
-ynh_secure_remove --file="/etc/$app"
-
-ynh_secure_remove --file="/var/log/$app"
+rm  -R -f $path/
+rmdir  $path
+rmdir  $path_temp
 
 #=================================================
 # END OF SCRIPT

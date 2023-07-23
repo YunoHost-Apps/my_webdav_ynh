@@ -1,9 +1,20 @@
-Some long and extensive description of what the app is and does, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Cette application installe un serveur Webdav sur votre instance Yunohost.
+Plusieurs serveurs Webdav peuvent être installés simultanément
+
+This application installs a Webdav serveur on your Yunohost . Several Webdav servers may be installed on the same Yunohost
+
+### Caractéristiques
+
+- création d'un répertoire propre à chaque serveur Webdav. Deux serveurs Webdav auront deux répertoires distincts'
+- un sous-répertoire par utilisateur
+- accès impossible à la racine du système
+- adresse URL identique pour chaque utilisateur: https://domain-name/webdav-name
+- authentification nécessaire avec les identifiants Yunohost
 
 ### Features
 
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco ;
-- Laboris nisi ut aliquip ex ea commodo consequat ;
-- Duis aute irure dolor in reprehenderit in voluptate ;
-- Velit esse cillum dolore eu fugiat nulla pariatur ;
-- Excepteur sint occaecat cupidatat non proident, sunt in culpa."
+- creation of a directory for each Webdav Server. 
+- a sub-directory for each user 
+- impossible acceess to machine root 
+- same URL for each user : https://domain-name/webdav-name
+- authentication with Yunohost user's 'credentials
