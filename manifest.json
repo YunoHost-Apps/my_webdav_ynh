@@ -1,0 +1,46 @@
+{
+    "name": "webdav",
+    "id": "webdav",
+    "packaging_format": 1,
+    "version": "1~ynh2",
+    "description": {
+        "en": "Configure your own Webdav server",        
+        "fr": "Configuration d'un serveur Webdav"
+    },
+    "license": "GPL-3.0-only",
+    "maintainer": {
+        "name": "marc_flender",
+        "email": "marc@famille-flender.fr",
+        "url": "https://github.com/Marc-Flender/webdav_ynh"
+    },
+    "url": "https://github.com/Marc-Flender/webdav_ynhh",
+    "requirements": {
+        "yunohost": ">= 11.0.0.0"
+    },
+    "multi_instance": true,
+    "services": [
+        "nginx"
+    ],
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain",
+                "ask": {
+                    "en": "Choose a domain for the menu",
+                    "fr": "Choisissez un nom de domaine pour le menu"
+                },
+                "example": "domain.org"
+            },
+            {
+                "name": "path",
+                "type": "path",
+                "ask": {
+                    "en": "Choose a path for the menu",
+                    "fr": "Choisissez l'adresse pour le menu"
+                },
+                "example": "/webdav",
+                "default": "/webdav"
+            }]
+    }
+}

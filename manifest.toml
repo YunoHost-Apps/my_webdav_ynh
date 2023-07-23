@@ -1,7 +1,7 @@
 packaging_format = 2
 
 id = "webdav"
-name = "Webdav Yunohost"
+name = "webdav"
 description.en = "Configure your own Webdav server"
 description.fr = "Configuration d'un serveur Webdav"
 
