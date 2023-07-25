@@ -1,21 +1,20 @@
 {
-    "name": "webdav",
-    "id": "webdav",
+    "name": "My Webdav Webapp",
+    "id": "my_flask_webapp",
     "packaging_format": 1,
-    "version": "1~ynh2",
     "description": {
-        "en": "Configure your own Webdav server",        
-        "fr": "Configuration d'un serveur Webdav"
+        "en": "Install and manage a Flask app from a git repository.",
+        "fr": "Installez et gérez une app Flask depuis un répertoire git."
     },
-    "license": "GPL-3.0-only",
+    "version": "0.1~ynh1",
+    "url": "https://github.com/YunoHost-Apps/my_flask_webapp_ynh",
+    "license": "AGPL-3.0",
     "maintainer": {
-        "name": "marc_flender",
-        "email": "marc@famille-flender.fr",
-        "url": "https://github.com/Marc-Flender/webdav_ynh"
+        "name": "axolotle",
+        "email": "contact@autre.space"
     },
-    "url": "https://github.com/Marc-Flender/webdav_ynhh",
     "requirements": {
-        "yunohost": ">= 10.0.0"
+        "yunohost": ">= 4.3.0"
     },
     "multi_instance": true,
     "services": [
@@ -25,22 +24,73 @@
         "install" : [
             {
                 "name": "domain",
-                "type": "domain",
-                "ask": {
-                    "en": "Choose a domain for the menu",
-                    "fr": "Choisissez un nom de domaine pour le menu"
-                },
-                "example": "domain.org"
+                "type": "domain"
             },
             {
                 "name": "path",
                 "type": "path",
+                "example": "/flaskapp",
+                "default": "/flaskapp"
+            },
+            {
+                "name": "is_public",
+                "type": "boolean",
+                "default": true
+            },
+            {
+                "name": "git_url",
                 "ask": {
-                    "en": "Choose a path for the menu",
-                    "fr": "Choisissez l'adresse pour le menu"
+                    "en": "Custom app git repository URL",
+                    "fr": "URL du répertoire git de l'app personnalisée"
                 },
-                "example": "/webdav",
-                "default": "/webdav"
-            }]
+                "example": "https://domain.tld/path/to/app",
+                "pattern": {
+                  "regexp": "^https:\\/\\/[a-zA-Z0-9-_.]+\\/[a-zA-Z0-9-_./]+\\/[a-zA-Z0-9-_.]+(\\/?(-\\/)?tree\\/[a-zA-Z0-9-_]+)?(\\.git)?\\/?$",
+                  "error": "App repository URLs are expected to look like <code>https://domain.tld/path/to/app</code>"
+                },
+                "help": {
+                    "en": "Must be a valid git repository.",
+                    "fr": "Doit être un lien valide vers un répertoire git."
+                }
+            },
+            {
+                "name": "git_branch",
+                "ask": {
+                    "en": "Custom app git repository branch",
+                    "fr": "branche du répertoire git de l'app personnalisée"
+                },
+                "default": "master"
+            },
+            {
+                "name": "permission",
+                "type": "boolean",
+                "default": true,
+                "ask": {
+                    "en": "Create an admin permission for this app",
+                    "fr": "Créer une permission admin pour cette app"
+                }
+            },
+            {
+                "name": "admin",
+                "type": "user",
+                "visible": "permission == true"
+            },
+            {
+                "default": "",
+                "name": "admin_route",
+                "type": "path",
+                "visible": "permission == true",
+                "ask": {
+                    "en": "Add an sso protected route",
+                    "fr": "Définir une route protégée par le sso"
+                },
+                "example": "/myadmin",
+                "help": {
+                    "en": "Consider using a less common route than `/admin`.",
+                    "fr": "Préférez utiliser une route moins commune que `/admin`"
+                },
+                "optional": true
+            }
+        ]
     }
 }
