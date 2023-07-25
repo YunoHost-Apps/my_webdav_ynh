@@ -15,7 +15,7 @@
     },
     "url": "https://github.com/Marc-Flender/webdav_ynhh",
     "requirements": {
-        "yunohost": ">= 11.0.0.0"
+        "yunohost": ">= 10.0.0.0"
     },
     "multi_instance": true,
     "services": [
