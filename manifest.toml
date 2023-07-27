@@ -1,96 +1,66 @@
-{
-    "name": "My Webdav Webapp",
-    "id": "my_flask_webapp",
-    "packaging_format": 1,
-    "description": {
-        "en": "Install and manage a Flask app from a git repository.",
-        "fr": "Installez et gérez une app Flask depuis un répertoire git."
-    },
-    "version": "0.1~ynh1",
-    "url": "https://github.com/YunoHost-Apps/my_flask_webapp_ynh",
-    "license": "AGPL-3.0",
-    "maintainer": {
-        "name": "axolotle",
-        "email": "contact@autre.space"
-    },
-    "requirements": {
-        "yunohost": ">= 4.3.0"
-    },
-    "multi_instance": true,
-    "services": [
-        "nginx"
-    ],
-    "arguments": {
-        "install" : [
-            {
-                "name": "domain",
-                "type": "domain"
-            },
-            {
-                "name": "path",
-                "type": "path",
-                "example": "/flaskapp",
-                "default": "/flaskapp"
-            },
-            {
-                "name": "is_public",
-                "type": "boolean",
-                "default": true
-            },
-            {
-                "name": "git_url",
-                "ask": {
-                    "en": "Custom app git repository URL",
-                    "fr": "URL du répertoire git de l'app personnalisée"
-                },
-                "example": "https://domain.tld/path/to/app",
-                "pattern": {
-                  "regexp": "^https:\\/\\/[a-zA-Z0-9-_.]+\\/[a-zA-Z0-9-_./]+\\/[a-zA-Z0-9-_.]+(\\/?(-\\/)?tree\\/[a-zA-Z0-9-_]+)?(\\.git)?\\/?$",
-                  "error": "App repository URLs are expected to look like <code>https://domain.tld/path/to/app</code>"
-                },
-                "help": {
-                    "en": "Must be a valid git repository.",
-                    "fr": "Doit être un lien valide vers un répertoire git."
-                }
-            },
-            {
-                "name": "git_branch",
-                "ask": {
-                    "en": "Custom app git repository branch",
-                    "fr": "branche du répertoire git de l'app personnalisée"
-                },
-                "default": "master"
-            },
-            {
-                "name": "permission",
-                "type": "boolean",
-                "default": true,
-                "ask": {
-                    "en": "Create an admin permission for this app",
-                    "fr": "Créer une permission admin pour cette app"
-                }
-            },
-            {
-                "name": "admin",
-                "type": "user",
-                "visible": "permission == true"
-            },
-            {
-                "default": "",
-                "name": "admin_route",
-                "type": "path",
-                "visible": "permission == true",
-                "ask": {
-                    "en": "Add an sso protected route",
-                    "fr": "Définir une route protégée par le sso"
-                },
-                "example": "/myadmin",
-                "help": {
-                    "en": "Consider using a less common route than `/admin`.",
-                    "fr": "Préférez utiliser une route moins commune que `/admin`"
-                },
-                "optional": true
-            }
-        ]
-    }
-}
+packaging_format = 2
+
+id = "webdav"
+name = "webdav"
+description.en = "Configure your own Webdav server"
+description.fr = "Configuration d'un serveur Webdav"
+
+version = "1.0~ynh1"
+
+maintainers = ["marc_flender"]
+
+[upstream]
+license = "GPL-3.0-only"
+code = "https://github.com/Marc-Flender/webdav_ynh"
+admindoc="https://github.com/Marc-Flender/webdav_ynh"
+userdoc ="https://github.com/Marc-Flender/webdav_ynh"
+
+[integration]
+yunohost = ">= 10.0.0"
+architectures = "all"
+multi_instance = false
+ldap = true
+sso = true
+disk = "100M"
+ram.build = "100k"
+ram.runtime = "100k"
+
+[install]
+    [install.domain]
+    # this is a generic question - ask strings are automatically handled by YunoHost's core
+    type = "domain"
+
+    [install.path]
+    # this is a generic question - ask strings are automatically handled by YunoHost's core
+    type = "path"
+    default = "/webdav"
+
+    [install.init_main_permission]
+    # this is a generic question - ask strings are automatically handled by YunoHost's core
+    # This won't be saved as setting and will instead be used to initialize the SSOwat permission
+    type = "group"
+    default = "all_users"
+
+[resources]
+	# see https://yunohost.org/fr/packaging_apps_resources
+    # See the packaging documentation for the full set
+    # of explanation regarding the behavior and properties for each of those
+
+    [resources.install_dir]
+    # This will create/remove the install dir as /var/www/$app
+    # and store the corresponding setting $install_dir
+    owner = "www-data"
+    group= "www-data"
+
+    [resources.permissions]
+    # This will configure SSOwat permission for $domain/$path/
+    # The initial allowed group of user is configured via the init_main_permission question (public=visitors, private=all_users)
+    main.url = "/"
+    show_tile="true"
+    auth_header="true"
+    allowed="all_users"
+	
+    #	[resources.data_dir]
+    #	dir="/var/www/$app_temp"
+    #    owner = "www-data"
+    #    group= "www-data"
