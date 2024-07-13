@@ -16,12 +16,12 @@ admindoc="https://github.com/Marc-Flender/webdav_ynh"
 userdoc ="https://github.com/Marc-Flender/webdav_ynh"
 
 [integration]
-yunohost = ">= 10.0.0"
+yunohost = ">= 11.2.0"
 architectures = "all"
 multi_instance = false
-ldap = true
+ldap = not_relevant
 sso = true
-disk = "100M"
+disk = "1M"
 ram.build = "100k"
 ram.runtime = "100k"
 
@@ -46,9 +46,13 @@ ram.runtime = "100k"
     # See the packaging documentation for the full set
     # of explanation regarding the behavior and properties for each of those
 
-    [resources.install_dir]
+    # [resources.install_dir]
     # This will create/remove the install dir as /var/www/$app
     # and store the corresponding setting $install_dir
+    
+    [resources.data_dir]
+    dir = "/home/yunohost.app/__APP__"
+    subdirs = ['tmp']
     owner = "www-data"
     group= "www-data"
 
@@ -60,7 +64,3 @@ ram.runtime = "100k"
     auth_header="true"
     allowed="all_users"
 	
-    #	[resources.data_dir]
-    #	dir="/var/www/$app_temp"
-    #    owner = "www-data"
-    #    group= "www-data"
