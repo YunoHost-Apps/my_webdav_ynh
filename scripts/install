@@ -30,9 +30,6 @@ source /usr/share/yunohost/helpers
 # or 'example__2', '__3', ... for multi-instance installs)
 #
 
-chown -R $app:www-data "$install_dir"
-
-
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
@@ -55,10 +52,10 @@ ynh_add_nginx_config
 #=================================================
 # TEMP DIRECTORY CREATION
 #=================================================
-webdav_temp_dir=$install_dir_temp
+# webdav_temp_dir=$install_dir_temp
 
-mkdir -p "$webdav_temp_dir"
-chown -R www-data:www-data "$webdav_temp_dir"
+# mkdir -p "$webdav_temp_dir"
+# chown -R www-data:www-data "$webdav_temp_dir"
 
 
 #=================================================
@@ -70,7 +67,7 @@ for u in ($users_list) do
 		actions/create_user $u
 	done
 
-chown -R www-data:www-data "$install_dir"
+chown -R www-data:www-data "$data_dir"
  
 #=================================================
 # END OF SCRIPT

@@ -1,5 +1,5 @@
 
 user="$1"
 
-rmdir -R $install_dir/$1
+rmdir -R $data_dir/$1
 

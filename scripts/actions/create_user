@@ -3,7 +3,7 @@
 
 local user=$1
 local URL_webdav=$domain$path
-local chemin="$install_dir/$user"
+local chemin="$data_dir/$user"
 
 mkdir -p $chemin
 

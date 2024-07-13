@@ -72,7 +72,7 @@ fi
 # $install_dir will automatically be initialized with some decent 
 # permission by default ... however, you may need to recursively reapply
 # ownership to all files such as after the ynh_setup_source step
-chown -R www-data:www-data "$install_dir"
+chown -R www-data:www-data "$data_dir"
 
 
 #=================================================
