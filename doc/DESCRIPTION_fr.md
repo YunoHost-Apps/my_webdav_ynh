@@ -1,9 +1,7 @@
-Cette application installe un serveur Webdav sur votre instance Yunohost.
+Cette application permet d'accéder à votre instance Yunohost avec le protocole Webdav
 
 ### Caractéristiques
 
-- création d'un répertoire propre au serveur Webdav. 
-- un sous-répertoire par utilisateur
-- accès impossible à la racine du système
-- adresse URL identique pour chaque utilisateur: https://domain-name/webdav-name
+- création d'un répertoire temporaire propre au serveur Webdav. 
+- accès au répertoire /home lorsqu'on utilise l'URL https://domain-name/webdav
 - authentification nécessaire avec les identifiants Yunohost

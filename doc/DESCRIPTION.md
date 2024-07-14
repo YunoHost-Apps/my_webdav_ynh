@@ -1,9 +1,8 @@
-This application installs a Webdav serveur on your Yunohost . Several Webdav servers may be installed on the same Yunohost
+This application gives access to your Yunohost server with Webdav protocol
 
 ### Features
 
-- creation of a directory for each Webdav Server. 
-- a sub-directory for each user 
-- impossible acceess to machine root 
-- same URL for each user : https://domain-name/webdav-name
+- creation of a temporary directory for Webdav Server. 
+- access to directory /home when connecting to https://domain.tld/webdav
 - authentication with Yunohost user's 'credentials
+
