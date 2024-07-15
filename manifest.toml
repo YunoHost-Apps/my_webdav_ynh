@@ -19,7 +19,7 @@ userdoc ="https://github.com/Marc-Flender/webdav_ynh"
 yunohost = ">= 11.2.0"
 architectures = "all"
 multi_instance = false
-ldap = not_relevant
+ldap = false
 sso = true
 disk = "1M"
 ram.build = "100k"
@@ -51,7 +51,6 @@ ram.runtime = "100k"
     # and store the corresponding setting $install_dir
     
     [resources.data_dir]
-    dir = "/home/yunohost.app/__APP__"
     subdirs = ['tmp']
     owner = "www-data"
     group= "www-data"
