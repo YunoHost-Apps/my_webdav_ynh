@@ -1,7 +1,7 @@
 packaging_format = 2
 
 id = "webdav"
-name = "webdav"
+name = "my_webdav"
 description.en = "Configure your own Webdav server"
 description.fr = "Configuration d'un serveur Webdav"
 
@@ -11,9 +11,9 @@ maintainers = ["marc_flender"]
 
 [upstream]
 license = "GPL-3.0-only"
-code = "https://github.com/Marc-Flender/webdav_ynh"
-admindoc="https://github.com/Marc-Flender/webdav_ynh"
-userdoc ="https://github.com/Marc-Flender/webdav_ynh"
+code = "https://github.com/YunoHost-Apps/webdav_ynh"
+admindoc="https://github.com/YunoHost-Apps/webdav_ynh"
+userdoc ="https://github.com/YunoHost-Apps/webdav_ynh"
 
 [integration]
 yunohost = ">= 11.2.0"
@@ -22,8 +22,8 @@ multi_instance = false
 ldap = false
 sso = true
 disk = "1M"
-ram.build = "100k"
-ram.runtime = "100k"
+ram.build = "100K"
+ram.runtime = "100K"
 
 [install]
     [install.domain]
