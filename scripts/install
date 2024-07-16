@@ -66,8 +66,6 @@ ynh_add_nginx_config
 for u in ($users_list) do
 		actions/create_user $u
 	done
-
-chown -R www-data:www-data "$data_dir"
  
 #=================================================
 # END OF SCRIPT
