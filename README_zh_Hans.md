@@ -3,15 +3,15 @@
 请勿手动编辑。
 -->
 
-# YunoHost 上的 webdav
+# YunoHost 上的 my_webdav
 
 [![集成程度](https://dash.yunohost.org/integration/webdav.svg)](https://ci-apps.yunohost.org/ci/apps/webdav/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/webdav.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/webdav.maintain.svg)
 
-[![使用 YunoHost 安装 webdav](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=webdav)
+[![使用 YunoHost 安装 my_webdav](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=webdav)
 
 *[阅读此 README 的其它语言版本。](./ALL_README.md)*
 
-> *通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 webdav。*  
+> *通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 my_webdav。*  
 > *如果您还没有 YunoHost，请参阅[指南](https://yunohost.org/install)了解如何安装它。*
 
 ## 概况
@@ -29,9 +29,9 @@ This application gives access to your Yunohost server with Webdav protocol
 **分发版本：** 1.0~ynh1
 ## 文档与资源
 
-- 官方用户文档： <https://github.com/Marc-Flender/webdav_ynh>
-- 官方管理文档： <https://github.com/Marc-Flender/webdav_ynh>
-- 上游应用代码库： <https://github.com/Marc-Flender/webdav_ynh>
+- 官方用户文档： <https://github.com/YunoHost-Apps/webdav_ynh>
+- 官方管理文档： <https://github.com/YunoHost-Apps/webdav_ynh>
+- 上游应用代码库： <https://github.com/YunoHost-Apps/webdav_ynh>
 - YunoHost 商店： <https://apps.yunohost.org/app/webdav>
 - 报告 bug： <https://github.com/YunoHost-Apps/webdav_ynh/issues>
 

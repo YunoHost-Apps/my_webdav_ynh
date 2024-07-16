@@ -3,15 +3,15 @@ NOTA: Este README foi creado automáticamente por <https://github.com/YunoHost/a
 NON debe editarse manualmente.
 -->
 
-# webdav para YunoHost
+# my_webdav para YunoHost
 
 [![Nivel de integración](https://dash.yunohost.org/integration/webdav.svg)](https://ci-apps.yunohost.org/ci/apps/webdav/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/webdav.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/webdav.maintain.svg)
 
-[![Instalar webdav con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=webdav)
+[![Instalar my_webdav con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=webdav)
 
 *[Le este README en outros idiomas.](./ALL_README.md)*
 
-> *Este paquete permíteche instalar webdav de xeito rápido e doado nun servidor YunoHost.*  
+> *Este paquete permíteche instalar my_webdav de xeito rápido e doado nun servidor YunoHost.*  
 > *Se non usas YunoHost, le a [documentación](https://yunohost.org/install) para saber como instalalo.*
 
 ## Vista xeral
@@ -29,9 +29,9 @@ This application gives access to your Yunohost server with Webdav protocol
 **Versión proporcionada:** 1.0~ynh1
 ## Documentación e recursos
 
-- Documentación oficial para usuarias: <https://github.com/Marc-Flender/webdav_ynh>
-- Documentación oficial para admin: <https://github.com/Marc-Flender/webdav_ynh>
-- Repositorio de orixe do código: <https://github.com/Marc-Flender/webdav_ynh>
+- Documentación oficial para usuarias: <https://github.com/YunoHost-Apps/webdav_ynh>
+- Documentación oficial para admin: <https://github.com/YunoHost-Apps/webdav_ynh>
+- Repositorio de orixe do código: <https://github.com/YunoHost-Apps/webdav_ynh>
 - Tenda YunoHost: <https://apps.yunohost.org/app/webdav>
 - Informar dun problema: <https://github.com/YunoHost-Apps/webdav_ynh/issues>
 
