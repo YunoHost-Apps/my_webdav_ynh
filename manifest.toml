@@ -52,8 +52,8 @@ ram.runtime = "100K"
     
     [resources.data_dir]
     subdirs = ['tmp']
-    owner = "www-data"
-    group= "www-data"
+    owner = "www-data:rw"
+    group= "www-data:rw"
 
     [resources.permissions]
     # This will configure SSOwat permission for $domain/$path/
