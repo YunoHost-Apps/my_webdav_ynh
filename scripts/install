@@ -49,6 +49,8 @@ ynh_script_progression --message="Adding system configurations related to $app .
 # Create a dedicated NGINX config using the conf/nginx.conf template
 ynh_add_nginx_config
 
+cat /etc/nginx/conf.d/$domain.d/$app.conf
+
 #=================================================
 # TEMP DIRECTORY CREATION
 #=================================================
