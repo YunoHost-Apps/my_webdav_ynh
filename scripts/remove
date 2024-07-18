@@ -38,7 +38,7 @@ ynh_secure_remove $data_dir
 users_list=$(ynh_user_list)
 for u in $users_list
 	do
-		actions/remove_user $u
+		remove_user $u
 	done
 
 #=================================================
