@@ -3,7 +3,7 @@
 #=================================================
 # COMMON VARIABLES
 #=================================================
-chemin_données="/home/yunohost.multimedia"
+chemin_données='/home/yunohost.multimedia'
 
 #=================================================
 # PERSONAL HELPERS
