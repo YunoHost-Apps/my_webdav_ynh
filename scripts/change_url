@@ -98,12 +98,12 @@ fi
 #=================================================
 # GENERIC FINALISATION
 #=================================================
-
-if [ $change_path -eq 1 ]
-then
-	mv -R "$old_path" "$new_path"
-	mv -R "$old_path_temp" "$new_path_temp"
-fi
+# réédition du fichier index.html pour chaque utilisateur
+users_list=$(ynh_user_list)
+for u in $users_list
+	do
+		actions/create_index-html $u
+	done
 
 #=================================================
 # RELOAD NGINX
