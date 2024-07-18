@@ -54,18 +54,20 @@ cat /etc/nginx/conf.d/$domain.d/$app.conf
 #=================================================
 # TEMP DIRECTORY CREATION
 #=================================================
-# webdav_temp_dir=$install_dir_temp
-
-# mkdir -p "$webdav_temp_dir"
-# chown -R www-data:www-data "$webdav_temp_dir"
-
+# remplacé par directive subdir dans le manifest.toml
+# code précédent:
+# 	webdav_temp_dir=$install_dir_temp
+# 	mkdir -p "$webdav_temp_dir"
+# 	chown -R www-data:www-data "$webdav_temp_dir"
 
 #=================================================
 # USERS' DIRECTORY CREATION
 #=================================================
- users_list=$(ynh_user_list)
+# le répertoire de chaque utilisateur sera déormais /home/yunohost.multimedia/$user qui existe par défaut
+# il faudra juste créer un index.html dans chqcun de ss répertoire, pour affichage depuis les tuiles sur un navigateur
 
-for u in ($users_list) 
+users_list=$(ynh_user_list)
+for u in $users_list
 	do
 		actions/create_user $u
 	done
