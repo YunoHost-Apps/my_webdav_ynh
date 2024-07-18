@@ -65,7 +65,7 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	for u in $users_list
 	do
-		actions/remove_user $u
+		remove_user $u
 	done
 
 	ynh_script_progression --message="Upgrading source files..." --weight=1
@@ -98,7 +98,7 @@ users_list=$(ynh_user_list)
 
 for u in $users_list
 	do
-		actions/create_user $u
+		create_user $u
 	done
 
 
