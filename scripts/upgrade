@@ -63,6 +63,11 @@ upgrade_type=$(ynh_check_app_version_changed)
 
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
+	for u in $users_list
+	do
+		actions/remove_user $u
+	done
+
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
 	# Download, check integrity, uncompress and patch the source from app.src
@@ -72,7 +77,6 @@ fi
 # $install_dir will automatically be initialized with some decent 
 # permission by default ... however, you may need to recursively reapply
 # ownership to all files such as after the ynh_setup_source step
-chown -R www-data:www-data "$data_dir"
 
 
 #=================================================
@@ -90,6 +94,13 @@ ynh_add_nginx_config
 # UPDATE A CONFIG FILE
 #=================================================
 ynh_script_progression --message="Updating a configuration file..." --weight=1
+users_list=$(ynh_user_list)
+
+for u in $users_list
+	do
+		actions/create_user $u
+	done
+
 
 #=================================================
 # END OF SCRIPT
