@@ -1,0 +1,7 @@
+#!/bin/bash
+source ../_common.sh
+
+local user=$1
+local chemin=$chemin_données
+
+rm -f $chemin/$user/index.html
