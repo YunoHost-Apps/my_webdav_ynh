@@ -1,4 +1,6 @@
 #!/bin/bash
+ynh_print_info "Entrée dans create_user"
+
 source ../_common.sh
 
 local user=$1
