@@ -1,9 +1,9 @@
 #!/bin/bash
-
+source ../_common.sh
 
 local user=$1
 local URL_webdav=$domain$path
-local chemin="home/yunohost.multimedia/$user"
+local chemin=$chemin_données/$user
 
 $pageContents = <<< EOPAGE
 <!DOCTYPE html>
