@@ -35,4 +35,4 @@ $pageContents = <<< EOPAGE
 EOPAGE;
 
 
-echo $pageContents >> $chemin/$user/index.html
+echo $pageContents > $chemin/$user/index.html
