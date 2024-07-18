@@ -35,7 +35,7 @@ $page_contents = <<EOPAGE
     <p>Vous pouvez d&eacute;sormais vous connecter &agrave; votre serveur Webdav</p>
     <p> URL : $URL_webdav</p>
     <p>Utilisez votre nom d&rsquo;'utilisateur Yunohost et votre mot de passe pour vous authentifier</p>
-    <p>Vos donn&eacute;es seront stock&eacute;es dans le chemin $chemin/$user</p>
+    <p>Vos donn&eacute;es seront stock&eacute;es dans le chemin $chemin_utilisateurs/$user</p>
     
 <p>En cas de souci, rendez-vous sur 
 <a href="https://github.com/YunoHost-Apps/my_webdav_ynh">my_Webdav_ynh</a>.
