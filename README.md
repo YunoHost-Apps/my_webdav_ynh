@@ -5,9 +5,9 @@ It shall NOT be edited by hand.
 
 # my_webdav for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/webdav.svg)](https://ci-apps.yunohost.org/ci/apps/webdav/) ![Working status](https://ci-apps.yunohost.org/ci/badges/webdav.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/webdav.maintain.svg)
+[![Integration level](https://dash.yunohost.org/integration/my_webdav.svg)](https://ci-apps.yunohost.org/ci/apps/my_webdav/) ![Working status](https://ci-apps.yunohost.org/ci/badges/my_webdav.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/my_webdav.maintain.svg)
 
-[![Install my_webdav with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=webdav)
+[![Install my_webdav with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
 
 *[Read this README in other languages.](./ALL_README.md)*
 
@@ -29,22 +29,22 @@ This application gives access to your Yunohost server with Webdav protocol
 **Shipped version:** 1.0~ynh1
 ## Documentation and resources
 
-- Official user documentation: <https://github.com/YunoHost-Apps/webdav_ynh>
-- Official admin documentation: <https://github.com/YunoHost-Apps/webdav_ynh>
-- Upstream app code repository: <https://github.com/YunoHost-Apps/webdav_ynh>
-- YunoHost Store: <https://apps.yunohost.org/app/webdav>
-- Report a bug: <https://github.com/YunoHost-Apps/webdav_ynh/issues>
+- Official user documentation: <https://github.com/YunoHost-Apps/my_webdav_ynh>
+- Official admin documentation: <https://github.com/YunoHost-Apps/my_webdav_ynh>
+- Upstream app code repository: <https://github.com/YunoHost-Apps/my_webdav_ynh>
+- YunoHost Store: <https://apps.yunohost.org/app/my_webdav>
+- Report a bug: <https://github.com/YunoHost-Apps/my_webdav_ynh/issues>
 
 ## Developer info
 
-Please send your pull request to the [`testing` branch](https://github.com/YunoHost-Apps/webdav_ynh/tree/testing).
+Please send your pull request to the [`testing` branch](https://github.com/YunoHost-Apps/my_webdav_ynh/tree/testing).
 
 To try the `testing` branch, please proceed like that:
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/webdav_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/my_webdav_ynh/tree/testing --debug
 or
-sudo yunohost app upgrade webdav -u https://github.com/YunoHost-Apps/webdav_ynh/tree/testing --debug
+sudo yunohost app upgrade my_webdav -u https://github.com/YunoHost-Apps/my_webdav_ynh/tree/testing --debug
 ```
 
 **More info regarding app packaging:** <https://yunohost.org/packaging_apps>

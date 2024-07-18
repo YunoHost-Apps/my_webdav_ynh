@@ -5,9 +5,9 @@ NON debe editarse manualmente.
 
 # my_webdav para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/webdav.svg)](https://ci-apps.yunohost.org/ci/apps/webdav/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/webdav.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/webdav.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/my_webdav.svg)](https://ci-apps.yunohost.org/ci/apps/my_webdav/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/my_webdav.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/my_webdav.maintain.svg)
 
-[![Instalar my_webdav con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=webdav)
+[![Instalar my_webdav con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
 
 *[Le este README en outros idiomas.](./ALL_README.md)*
 
@@ -29,22 +29,22 @@ This application gives access to your Yunohost server with Webdav protocol
 **Versión proporcionada:** 1.0~ynh1
 ## Documentación e recursos
 
-- Documentación oficial para usuarias: <https://github.com/YunoHost-Apps/webdav_ynh>
-- Documentación oficial para admin: <https://github.com/YunoHost-Apps/webdav_ynh>
-- Repositorio de orixe do código: <https://github.com/YunoHost-Apps/webdav_ynh>
-- Tenda YunoHost: <https://apps.yunohost.org/app/webdav>
-- Informar dun problema: <https://github.com/YunoHost-Apps/webdav_ynh/issues>
+- Documentación oficial para usuarias: <https://github.com/YunoHost-Apps/my_webdav_ynh>
+- Documentación oficial para admin: <https://github.com/YunoHost-Apps/my_webdav_ynh>
+- Repositorio de orixe do código: <https://github.com/YunoHost-Apps/my_webdav_ynh>
+- Tenda YunoHost: <https://apps.yunohost.org/app/my_webdav>
+- Informar dun problema: <https://github.com/YunoHost-Apps/my_webdav_ynh/issues>
 
 ## Info de desenvolvemento
 
-Envía a túa colaboración á [rama `testing`](https://github.com/YunoHost-Apps/webdav_ynh/tree/testing).
+Envía a túa colaboración á [rama `testing`](https://github.com/YunoHost-Apps/my_webdav_ynh/tree/testing).
 
 Para probar a rama `testing`, procede deste xeito:
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/webdav_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/my_webdav_ynh/tree/testing --debug
 ou
-sudo yunohost app upgrade webdav -u https://github.com/YunoHost-Apps/webdav_ynh/tree/testing --debug
+sudo yunohost app upgrade my_webdav -u https://github.com/YunoHost-Apps/my_webdav_ynh/tree/testing --debug
 ```
 
 **Máis info sobre o empaquetado da app:** <https://yunohost.org/packaging_apps>
