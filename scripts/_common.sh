@@ -16,7 +16,7 @@ local user=$1
 local URL_webdav=$domain$path
 local chemin=$chemin_data
 
-pageContents = <<EOPAGE
+$page_contents = <<EOPAGE
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,8 +44,7 @@ pageContents = <<EOPAGE
 </html>
 EOPAGE
 
-
-echo $pageContents > $chemin/$user/index.html
+echo $page_contents > $chemin/$user/index.html
 
 }
 
