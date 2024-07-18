@@ -32,6 +32,14 @@ ynh_script_progression --message="Removing system configurations related to $app
 ynh_remove_nginx_config
 
 ynh_secure_remove $data_dir
+#=================================================
+# REMOVE DATAs 
+#=================================================
+users_list=$(ynh_user_list)
+for u in $users_list
+	do
+		rm -f $chemin_données/$u/index.html 
+	done
 
 #=================================================
 # END OF SCRIPT
