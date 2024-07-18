@@ -69,7 +69,7 @@ cat /etc/nginx/conf.d/$domain.d/$app.conf
 users_list=$(ynh_user_list)
 for u in $users_list
 	do
-		actions/create_user $u
+		create_user $u
 	done
  
 #=================================================
