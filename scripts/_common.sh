@@ -16,7 +16,7 @@ local user=$1
 local URL_webdav=$domain$path
 local chemin=$chemin_data
 
-$pageContents = <<EOPAGE
+pageContents = <<EOPAGE
 <!DOCTYPE html>
 <html>
 <head>
