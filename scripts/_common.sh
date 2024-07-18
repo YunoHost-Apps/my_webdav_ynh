@@ -38,7 +38,7 @@ $pageContents = <<< EOPAGE
     <p>Vos donn&eacute;es seront stock&eacute;es dans le chemin $chemin/$user</p>
     
 <p>En cas de souci, rendez-vous sur 
-<a href="https://github.com/YunoHost-Apps/my_webdav_ynh">my_Webdav_ynh"</a>.
+<a href="https://github.com/YunoHost-Apps/my_webdav_ynh">my_Webdav_ynh</a>.
 </p>
 </body>
 </html>
