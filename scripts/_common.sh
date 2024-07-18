@@ -14,6 +14,7 @@ ynh_print_info "Entrée dans create_user"
 
 local user=$1
 local URL_webdav=$domain$path
+local page_contents=''
 
 $page_contents = <<EOPAGE
 <!DOCTYPE html>
