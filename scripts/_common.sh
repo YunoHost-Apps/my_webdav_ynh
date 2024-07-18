@@ -3,7 +3,7 @@
 #=================================================
 # COMMON VARIABLES
 #=================================================
-chemin_data='/home/yunohost.multimedia'
+chemin_utilisateurs='/home/yunohost.multimedia'
 
 #=================================================
 # PERSONAL HELPERS
@@ -14,7 +14,6 @@ ynh_print_info "Entrée dans create_user"
 
 local user=$1
 local URL_webdav=$domain$path
-local chemin=$chemin_data
 
 $page_contents = <<EOPAGE
 <!DOCTYPE html>
@@ -44,7 +43,7 @@ $page_contents = <<EOPAGE
 </html>
 EOPAGE
 
-echo $page_contents > $chemin/$user/index.html
+echo $page_contents > $chemin_utilisateurs/$user/index.html
 
 }
 
@@ -52,9 +51,8 @@ echo $page_contents > $chemin/$user/index.html
 remove_user() {
 
 local user=$1
-local chemin=$chemin_data
 
-rm -f $chemin/$user/index.html
+rm -f $chemin_utilisateurs/$user/index.html
 
 }
 #=================================================
