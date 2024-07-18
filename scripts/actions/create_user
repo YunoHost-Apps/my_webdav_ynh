@@ -3,9 +3,7 @@
 
 local user=$1
 local URL_webdav=$domain$path
-local chemin="$data_dir/$user"
-
-mkdir -p $chemin
+local chemin="home/yunohost.multimedia/$user"
 
 $pageContents = <<< EOPAGE
 <!DOCTYPE html>
@@ -29,7 +27,7 @@ $pageContents = <<< EOPAGE
     <p>Vos donn&eacute;es seront stock&eacute;es dans le chemin $chemin</p>
     
 <p>En cas de souci, rendez-vous sur 
-<a href="https://github.com/Marc-Flender/webdav_ynh">Webdav_ynh</a>.
+<a href="https://github.com/YunoHost-Apps/my_webdav_ynh">my_Webdav_ynh"</a>.
 </p>
 </body>
 </html>
