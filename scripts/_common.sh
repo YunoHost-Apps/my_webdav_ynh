@@ -14,12 +14,15 @@ chemin_utilisateurs='/home/yunohost.multimedia'
 # PERSONAL HELPERS
 #=================================================
 
+
 create_user () {
 #ynh_print_info "Entrée dans create_user"
 
 local user=$1
 local URL_webdav=$domain$path
 local page_contents=''
+
+ls /home
 
 if [[ !(-d "$chemin_utilisateurs/$user") ]]
   then 
