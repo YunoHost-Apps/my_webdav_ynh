@@ -21,6 +21,10 @@ local user=$1
 local URL_webdav=$domain$path
 local page_contents=''
 
+if [[ !(-d "$chemin_utilisateurs/$user") ]]
+  then 
+   mkdir  $chemin_utilisateurs/$user
+fi
 # syntaxe here-doc: 
 #     EOPAGE est e delimiteur. 
 # commande en début de ligne: préférer cat à écho car echo ne travaille pas avec les pipe
@@ -137,7 +141,10 @@ remove_user() {
 
 local user=$1
 
-rm -f $chemin_utilisateurs/$user/index.html
+ if [[ (-f "$chemin_utilisateurs/$user/index.html" ) ]]
+  then 
+    rm -f $chemin_utilisateurs/$user/index.html
+fi
 
 }
 #=================================================
