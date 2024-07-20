@@ -63,6 +63,7 @@ upgrade_type=$(ynh_check_app_version_changed)
 
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
+    users_list=$(ynh_user_list)
 	for u in $users_list
 	do
 		remove_user $u
