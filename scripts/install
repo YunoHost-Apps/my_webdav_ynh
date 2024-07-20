@@ -63,9 +63,15 @@ cat /etc/nginx/conf.d/$domain.d/$app.conf
 #=================================================
 # USERS' DIRECTORY CREATION
 #=================================================
-# le répertoire de chaque utilisateur sera déormais /home/yunohost.multimedia/$user qui existe par défaut
-# il faudra juste créer un index.html dans chqcun de ss répertoire, pour affichage depuis les tuiles sur un navigateur
+# le répertoire de chaque utilisateur sera désormais /home/yunohost.multimedia/$user qui existe par défaut
+# néanmoins, lors du test par package_checker, ce répertoire semble ne pas être systématiquement présent.
+# il faut donc le créer s'il n'existe pas
+if [[ !(-d "$chemin_utilisateurs") ]]
+  then 
+   ynh_multimedia_build_main_dir
+fi
 
+# il faudra juste créer un index.html dans chacun de ss répertoire, pour affichage depuis les tuiles sur un navigateur
 users_list=$(ynh_user_list)
 for u in $users_list
 	do

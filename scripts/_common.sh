@@ -22,12 +22,6 @@ local user=$1
 local URL_webdav=$domain$path
 local page_contents=''
 
-ls /home
-
-if [[ !(-d "$chemin_utilisateurs/$user") ]]
-  then 
-   mkdir  $chemin_utilisateurs/$user
-fi
 # syntaxe here-doc: 
 #     EOPAGE est e delimiteur. 
 # commande en début de ligne: préférer cat à écho car echo ne travaille pas avec les pipe
