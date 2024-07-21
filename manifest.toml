@@ -1,7 +1,7 @@
 packaging_format = 2
 
-id = "webdav"
-name = "webdav"
+id = "my_webdav"
+name = "my_webdav"
 description.en = "Configure your own Webdav server"
 description.fr = "Configuration d'un serveur Webdav"
 
@@ -11,19 +11,19 @@ maintainers = ["marc_flender"]
 
 [upstream]
 license = "GPL-3.0-only"
-code = "https://github.com/Marc-Flender/webdav_ynh"
-admindoc="https://github.com/Marc-Flender/webdav_ynh"
-userdoc ="https://github.com/Marc-Flender/webdav_ynh"
+code = "https://github.com/YunoHost-Apps/my_webdav_ynh"
+admindoc="https://github.com/YunoHost-Apps/my_webdav_ynh"
+userdoc ="https://github.com/YunoHost-Apps/my_webdav_ynh"
 
 [integration]
 yunohost = ">= 11.2.0"
 architectures = "all"
 multi_instance = false
-ldap = not_relevant
+ldap = false
 sso = true
 disk = "1M"
-ram.build = "100k"
-ram.runtime = "100k"
+ram.build = "100K"
+ram.runtime = "100K"
 
 [install]
     [install.domain]
@@ -33,7 +33,7 @@ ram.runtime = "100k"
     [install.path]
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "path"
-    default = "/webdav"
+    default = "/my_webdav"
 
     [install.init_main_permission]
     # this is a generic question - ask strings are automatically handled by YunoHost's core
@@ -51,16 +51,15 @@ ram.runtime = "100k"
     # and store the corresponding setting $install_dir
     
     [resources.data_dir]
-    dir = "/home/yunohost.app/__APP__"
+    # le subdir est utilisé comme répertoire temporaire par nginx.conf
+    # il se trouve donc dans __DATA_DIR__ = /home/yunohost.app/__APP__
+    # en revanche,le chemin des données utilisateur  est défini en dur dans _common.sh
     subdirs = ['tmp']
-    owner = "www-data"
-    group= "www-data"
+    owner = "www-data:rw"
+    group= "www-data:rw"
 
     [resources.permissions]
     # This will configure SSOwat permission for $domain/$path/
     # The initial allowed group of user is configured via the init_main_permission question (public=visitors, private=all_users)
     main.url = "/"
-    show_tile="true"
-    auth_header="true"
-    allowed="all_users"
 	
