@@ -22,6 +22,13 @@ local user=$1
 local URL_webdav=$domain$path
 local page_contents=''
 
+if [[ ! (-d "$chemin_utilisateurs/$user" ) ]]
+  then 
+    echo répertoire $chemin_utilisateurs/$user : inexistant
+    return
+
+fi
+
 # syntaxe here-doc: 
 #     EOPAGE est e delimiteur. 
 # commande en début de ligne: préférer cat à écho car echo ne travaille pas avec les pipe
@@ -133,6 +140,7 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
 
 EOPAGE
 }
+
 
 remove_user() {
 

@@ -1,5 +1,7 @@
+#!/bin/bash
+source ../settings/scripts/_common.sh
 
 user="$1"
 
-rmdir -R $data_dir/$1
+remove_user $user
 
