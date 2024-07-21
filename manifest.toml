@@ -51,9 +51,6 @@ ram.runtime = "100K"
     # and store the corresponding setting $install_dir
     
     [resources.data_dir]
-    # le subdir est utilisé comme répertoire temporaire par nginx.conf
-    # il se trouve donc dans __DATA_DIR__ = /home/yunohost.app/__APP__
-    # en revanche,le chemin des données utilisateur  est défini en dur dans _common.sh
     subdirs = ['tmp']
     owner = "www-data:rw"
     group= "www-data:rw"
