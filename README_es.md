@@ -43,7 +43,7 @@ Para probar la rama `testing`, sigue asÍ:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/webdav_ynh/tree/testing --debug
-o
+
 sudo yunohost app upgrade webdav -u https://github.com/YunoHost-Apps/webdav_ynh/tree/testing --debug
 ```
 
