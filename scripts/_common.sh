@@ -38,7 +38,7 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
 <html>
 <head>
     <meta charset="utf-8">
-    <base href="$domain/yunohost/sso/" target="_blank">
+    <base href="https://$domain/yunohost/sso/" target="_blank">
     <title>My_Webdav Yunohost</title>
 
   <!-- Responsive -->
@@ -100,7 +100,7 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
 
     <h3>Vous pouvez d&eacute;sormais vous connecter &agrave; votre serveur Webdav
     </h3>
-    <p class="form-text"> URL : $URL_webdav</p>
+    <p class="form-text"> URL : https://$URL_webdav</p>
     <br>
     <br>
 
