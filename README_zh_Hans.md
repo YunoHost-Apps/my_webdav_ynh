@@ -3,15 +3,15 @@
 请勿手动编辑。
 -->
 
-# YunoHost 上的 webdav
+# YunoHost 上的 my_webdav
 
-[![集成程度](https://dash.yunohost.org/integration/webdav.svg)](https://ci-apps.yunohost.org/ci/apps/webdav/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/webdav.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/webdav.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/my_webdav.svg)](https://ci-apps.yunohost.org/ci/apps/my_webdav/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/my_webdav.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/my_webdav.maintain.svg)
 
-[![使用 YunoHost 安装 webdav](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=webdav)
+[![使用 YunoHost 安装 my_webdav](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
 
 *[阅读此 README 的其它语言版本。](./ALL_README.md)*
 
-> *通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 webdav。*  
+> *通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 my_webdav。*  
 > *如果您还没有 YunoHost，请参阅[指南](https://yunohost.org/install)了解如何安装它。*
 
 ## 概况
@@ -29,22 +29,22 @@ This application gives access to your Yunohost server with Webdav protocol
 **分发版本：** 1.0~ynh1
 ## 文档与资源
 
-- 官方用户文档： <https://github.com/Marc-Flender/webdav_ynh>
-- 官方管理文档： <https://github.com/Marc-Flender/webdav_ynh>
-- 上游应用代码库： <https://github.com/Marc-Flender/webdav_ynh>
-- YunoHost 商店： <https://apps.yunohost.org/app/webdav>
-- 报告 bug： <https://github.com/YunoHost-Apps/webdav_ynh/issues>
+- 官方用户文档： <https://github.com/YunoHost-Apps/my_webdav_ynh>
+- 官方管理文档： <https://github.com/YunoHost-Apps/my_webdav_ynh>
+- 上游应用代码库： <https://github.com/YunoHost-Apps/my_webdav_ynh>
+- YunoHost 商店： <https://apps.yunohost.org/app/my_webdav>
+- 报告 bug： <https://github.com/YunoHost-Apps/my_webdav_ynh/issues>
 
 ## 开发者信息
 
-请向 [`testing` 分支](https://github.com/YunoHost-Apps/webdav_ynh/tree/testing) 发送拉取请求。
+请向 [`testing` 分支](https://github.com/YunoHost-Apps/my_webdav_ynh/tree/testing) 发送拉取请求。
 
 如要尝试 `testing` 分支，请这样操作：
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/webdav_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/my_webdav_ynh/tree/testing --debug
 或
-sudo yunohost app upgrade webdav -u https://github.com/YunoHost-Apps/webdav_ynh/tree/testing --debug
+sudo yunohost app upgrade my_webdav -u https://github.com/YunoHost-Apps/my_webdav_ynh/tree/testing --debug
 ```
 
 **有关应用打包的更多信息：** <https://yunohost.org/packaging_apps>
