@@ -35,6 +35,8 @@ ynh_backup --src_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 #=================================================
 # SPECIFIC BACKUP
 #=================================================
+ynh_backup --src_path="$chemin_utilisateurs"
+
 
 #=================================================
 # END OF SCRIPT
