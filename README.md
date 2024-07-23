@@ -26,8 +26,7 @@ This application gives access to your Yunohost server with Webdav protocol
 
 
 
-
-**Shipped version:** 1.1~ynh1
+**Shipped version:** 1.2~ynh1
 ## Documentation and resources
 
 - Official user documentation: <https://github.com/YunoHost-Apps/my_webdav_ynh>

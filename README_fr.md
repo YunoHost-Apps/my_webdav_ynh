@@ -24,8 +24,8 @@ Cette application permet d'accéder à votre instance Yunohost avec le protocole
 - accès au répertoire /home lorsqu'on utilise l'URL https://domain-name/webdav
 - authentification nécessaire avec les identifiants Yunohost
 
-**Version incluse :** 1.2~ynh1
 
+**Version incluse :** 1.2~ynh1
 ## Documentations et ressources
 
 - Documentation officielle utilisateur : <https://github.com/YunoHost-Apps/my_webdav_ynh>

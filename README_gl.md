@@ -25,8 +25,8 @@ This application gives access to your Yunohost server with Webdav protocol
 - authentication with Yunohost user's 'credentials
 
 
-**Versión proporcionada:** 1.2~ynh1
 
+**Versión proporcionada:** 1.2~ynh1
 ## Documentación e recursos
 
 - Documentación oficial para usuarias: <https://github.com/YunoHost-Apps/my_webdav_ynh>
