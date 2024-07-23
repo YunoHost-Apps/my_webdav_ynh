@@ -25,8 +25,8 @@ This application gives access to your Yunohost server with Webdav protocol
 - authentication with Yunohost user's 'credentials
 
 
-
 **分发版本：** 1.2~ynh1
+
 ## 文档与资源
 
 - 官方用户文档： <https://github.com/YunoHost-Apps/my_webdav_ynh>
