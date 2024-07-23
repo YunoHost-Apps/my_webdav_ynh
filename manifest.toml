@@ -5,7 +5,8 @@ name = "my_webdav"
 description.en = "Configure your own Webdav server"
 description.fr = "Configuration d'un serveur Webdav"
 
-version = "1.1~ynh1"
+version = "1.2~ynh1"
+
 
 maintainers = ["marc_flender"]
 
@@ -49,12 +50,12 @@ ram.runtime = "100K"
     # [resources.install_dir]
     # This will create/remove the install dir as /var/www/$app
     # and store the corresponding setting $install_dir
-    [resources.install_dir]
 
     [resources.data_dir]
-    subdirs = ['tmp']
-    owner = "www-data:rw"
-    group= "www-data:rw"
+    # ATTENTION: risque de dysfonctionnement si le répertoire temporaire n'a pa l'accès en "rwx"
+    subdirs = ['tmp']    
+    owner = "www-data:rwx"
+    group= "www-data:rwx"
 
     [resources.permissions]
     # This will configure SSOwat permission for $domain/$path/
