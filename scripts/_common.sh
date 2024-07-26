@@ -95,7 +95,7 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
 	<h1>Serveur My_Webdav sur Yunohost
     </h1>
 
-	<h2>Si vous voyez cette page, c'est que la configuration du Webdav devrait fonctionner
+	<h2>Si vous voyez cette page, c&rsquo;est que la configuration du Webdav devrait fonctionner
     </h2>
 
     <h3>Vous pouvez d&eacute;sormais vous connecter &agrave; votre serveur Webdav
