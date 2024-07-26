@@ -36,11 +36,12 @@ ram.runtime = "100K"
     type = "path"
     default = "/my_webdav"
 
-    [install.init_main_permission]
+    #[install.init_main_permission]
+    # installation obligatoire en privé pour all_users. Voir ci-dessous dans [resources.permissions]
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     # This won't be saved as setting and will instead be used to initialize the SSOwat permission
-    type = "group"
-    default = "all_users"
+    #type = "group"
+    #default = "all_users"
 
 [resources]
 	# see https://yunohost.org/fr/packaging_apps_resources
@@ -61,4 +62,5 @@ ram.runtime = "100K"
     # This will configure SSOwat permission for $domain/$path/
     # The initial allowed group of user is configured via the init_main_permission question (public=visitors, private=all_users)
     main.url = "/"
+    main.allowed = "all_users"
 	
