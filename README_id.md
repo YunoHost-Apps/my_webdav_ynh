@@ -35,7 +35,7 @@ will be stored, on the server, in the path of the connected user: **/home/yunosh
 
 - Dokumentasi pengguna resmi: <https://github.com/YunoHost-Apps/my_webdav_ynh>
 - Dokumentasi admin resmi: <https://github.com/YunoHost-Apps/my_webdav_ynh>
-- Repositori kode aplikasi hulu: <https://github.com/YunoHost-Apps/my_webdav_ynh>
+- Depot kode aplikasi hulu: <https://github.com/YunoHost-Apps/my_webdav_ynh>
 - Gudang YunoHost: <https://apps.yunohost.org/app/my_webdav>
 - Laporkan bug: <https://github.com/YunoHost-Apps/my_webdav_ynh/issues>
 
