@@ -49,8 +49,6 @@ ynh_script_progression --message="Adding system configurations related to $app .
 # Create a dedicated NGINX config using the conf/nginx.conf template
 ynh_add_nginx_config
 
-cat /etc/nginx/conf.d/$domain.d/$app.conf
-
 #=================================================
 # TEMP DIRECTORY CREATION
 #=================================================
@@ -70,6 +68,15 @@ if [[ !(-d "$chemin_utilisateurs") ]]
   then 
    ynh_multimedia_build_main_dir
 fi
+
+# puis on ajoute www-data au groupe multimedia pour donner accès en http (protocole webdav)
+# si multimedia n'existe pas, yunohost le créera
+ynh_multimedia_addaccess www-data
+
+
+# attention, sur ma version, les répertoires sous /home/yunohost.multimedia ne sont pas dans le groupe "multimedia".
+#  Il faut rectifier car le protocole webdav utilise le groupe www-data pour écrire en protocole http dans les répertoires
+chgrp -f -R multimedia $chemin_utilisateurs
 
 # il faudra juste créer un index.html dans chacun de ss répertoire, pour affichage depuis les tuiles sur un navigateur
 users_list=$(ynh_user_list)

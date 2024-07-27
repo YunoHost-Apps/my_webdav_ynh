@@ -1,5 +1,7 @@
 #!/bin/bash
+source ../settings/scripts/_common.sh
+
 
 user="$1"
 
-	..scripts/actions/create_user $u
+create_user $user

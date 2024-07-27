@@ -22,6 +22,13 @@ local user=$1
 local URL_webdav=$domain$path
 local page_contents=''
 
+if [[ ! (-d "$chemin_utilisateurs/$user" ) ]]
+  then 
+    echo répertoire $chemin_utilisateurs/$user : inexistant
+    return
+
+fi
+
 # syntaxe here-doc: 
 #     EOPAGE est e delimiteur. 
 # commande en début de ligne: préférer cat à écho car echo ne travaille pas avec les pipe
@@ -31,7 +38,7 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
 <html>
 <head>
     <meta charset="utf-8">
-    <base href="$domain/yunohost/sso/" target="_blank">
+    <base href="https://$domain/yunohost/sso/" target="_blank">
     <title>My_Webdav Yunohost</title>
 
   <!-- Responsive -->
@@ -88,12 +95,12 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
 	<h1>Serveur My_Webdav sur Yunohost
     </h1>
 
-	<h2>Si vous voyez cette page, c'est que la configuration du Webdav devrait fonctionner
+	<h2>Si vous voyez cette page, c&rsquo;est que la configuration du Webdav devrait fonctionner
     </h2>
 
     <h3>Vous pouvez d&eacute;sormais vous connecter &agrave; votre serveur Webdav
     </h3>
-    <p class="form-text"> URL : $URL_webdav</p>
+    <p class="form-text"> URL : https://$URL_webdav</p>
     <br>
     <br>
 
@@ -133,6 +140,7 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
 
 EOPAGE
 }
+
 
 remove_user() {
 
