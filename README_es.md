@@ -3,15 +3,15 @@ Este archivo README esta generado automaticamente<https://github.com/YunoHost/ap
 No se debe editar a mano.
 -->
 
-# my_webdav para Yunohost
+# My Webdav para Yunohost
 
 [![Nivel de integración](https://dash.yunohost.org/integration/my_webdav.svg)](https://ci-apps.yunohost.org/ci/apps/my_webdav/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/my_webdav.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/my_webdav.maintain.svg)
 
-[![Instalar my_webdav con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
+[![Instalar My Webdav con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
 
 *[Leer este README en otros idiomas.](./ALL_README.md)*
 
-> *Este paquete le permite instalarmy_webdav rapidamente y simplement en un servidor YunoHost.*  
+> *Este paquete le permite instalarMy Webdav rapidamente y simplement en un servidor YunoHost.*  
 > *Si no tiene YunoHost, visita [the guide](https://yunohost.org/install) para aprender como instalarla.*
 
 ## Descripción general
@@ -33,8 +33,6 @@ will be stored, on the server, in the path of the connected user: **/home/yunosh
 **Versión actual:** 1.2~ynh1
 ## Documentaciones y recursos
 
-- Documentación usuario oficial: <https://github.com/YunoHost-Apps/my_webdav_ynh>
-- Documentación administrador oficial: <https://github.com/YunoHost-Apps/my_webdav_ynh>
 - Repositorio del código fuente oficial de la aplicación : <https://github.com/YunoHost-Apps/my_webdav_ynh>
 - Catálogo YunoHost: <https://apps.yunohost.org/app/my_webdav>
 - Reportar un error: <https://github.com/YunoHost-Apps/my_webdav_ynh/issues>

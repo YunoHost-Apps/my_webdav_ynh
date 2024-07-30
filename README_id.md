@@ -3,15 +3,15 @@ N.B.: README ini dibuat secara otomatis oleh <https://github.com/YunoHost/apps/t
 Ini TIDAK boleh diedit dengan tangan.
 -->
 
-# my_webdav untuk YunoHost
+# My Webdav untuk YunoHost
 
 [![Tingkat integrasi](https://dash.yunohost.org/integration/my_webdav.svg)](https://ci-apps.yunohost.org/ci/apps/my_webdav/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/my_webdav.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/my_webdav.maintain.svg)
 
-[![Pasang my_webdav dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
+[![Pasang My Webdav dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
 
 *[Baca README ini dengan bahasa yang lain.](./ALL_README.md)*
 
-> *Paket ini memperbolehkan Anda untuk memasang my_webdav secara cepat dan mudah pada server YunoHost.*  
+> *Paket ini memperbolehkan Anda untuk memasang My Webdav secara cepat dan mudah pada server YunoHost.*  
 > *Bila Anda tidak mempunyai YunoHost, silakan berkonsultasi dengan [panduan](https://yunohost.org/install) untuk mempelajari bagaimana untuk memasangnya.*
 
 ## Ringkasan
@@ -33,9 +33,7 @@ will be stored, on the server, in the path of the connected user: **/home/yunosh
 **Versi terkirim:** 1.2~ynh1
 ## Dokumentasi dan sumber daya
 
-- Dokumentasi pengguna resmi: <https://github.com/YunoHost-Apps/my_webdav_ynh>
-- Dokumentasi admin resmi: <https://github.com/YunoHost-Apps/my_webdav_ynh>
-- Repositori kode aplikasi hulu: <https://github.com/YunoHost-Apps/my_webdav_ynh>
+- Depot kode aplikasi hulu: <https://github.com/YunoHost-Apps/my_webdav_ynh>
 - Gudang YunoHost: <https://apps.yunohost.org/app/my_webdav>
 - Laporkan bug: <https://github.com/YunoHost-Apps/my_webdav_ynh/issues>
 
