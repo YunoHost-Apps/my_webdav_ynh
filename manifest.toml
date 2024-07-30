@@ -1,7 +1,7 @@
 packaging_format = 2
 
 id = "my_webdav"
-name = "my_webdav"
+name = "My Webdav"
 description.en = "Configure your own Webdav server"
 description.fr = "Configuration d'un serveur Webdav"
 
@@ -13,8 +13,6 @@ maintainers = ["marc_flender"]
 [upstream]
 license = "GPL-3.0-only"
 code = "https://github.com/YunoHost-Apps/my_webdav_ynh"
-admindoc="https://github.com/YunoHost-Apps/my_webdav_ynh"
-userdoc ="https://github.com/YunoHost-Apps/my_webdav_ynh"
 
 [integration]
 yunohost = ">= 11.2.0"
