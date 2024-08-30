@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
 source _common.sh
 source /usr/share/yunohost/helpers
 
@@ -28,14 +22,11 @@ source /usr/share/yunohost/helpers
 ### - UPGRADE_PACKAGE if only the YunoHost package has changed
 ### ynh_check_app_version_changed will stop the upgrade if the app is up to date.
 ### UPGRADE_APP should be used to upgrade the core app only if there's an upgrade to do.
-upgrade_type=$(ynh_check_app_version_changed)
 
-#=================================================
-# STANDARD UPGRADE STEPS
 #=================================================
 # ENSURE DOWNWARD COMPATIBILITY
 #=================================================
-#ynh_script_progression --message="Ensuring downward compatibility..." --time --weight=1
+#ynh_script_progression "Ensuring downward compatibility..."
 
 #
 # N.B. : the followings setting migrations snippets are provided as *EXAMPLES*
@@ -46,13 +37,13 @@ upgrade_type=$(ynh_check_app_version_changed)
 # If db_name doesn't exist, create it
 #if [ -z "$db_name" ]; then
 #	db_name=$(ynh_sanitize_dbid --db_name=$app)
-#	ynh_app_setting_set --app=$app --key=db_name --value=$db_name
+#	ynh_app_setting_set --key=db_name --value=$db_name
 #fi
 
 # If install_dir doesn't exist, create it
 #if [ -z "$install_dir" ]; then
 #	install_dir=/var/www/$app
-#	ynh_app_setting_set --app=$app --key=install_dir --value=$install_dir
+#	ynh_app_setting_set --key=install_dir --value=$install_dir
 #fi
 
 #=================================================
@@ -61,7 +52,8 @@ upgrade_type=$(ynh_check_app_version_changed)
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 
-if [ "$upgrade_type" == "UPGRADE_APP" ]
+# FIXME: this is still supported but the recommendation is now to *always* re-setup the app sources wether or not the upstream sources changed
+if ynh_app_upstream_version_changed
 then
     users_list=$(ynh_user_list)
 	for u in $users_list
@@ -69,32 +61,32 @@ then
 		remove_user $u
 	done
 
-	ynh_script_progression --message="Upgrading source files..." --weight=1
+	ynh_script_progression "Upgrading source files..."
 
 	# Download, check integrity, uncompress and patch the source from app.src
 #	ynh_setup_source --dest_dir="$install_dir"
 fi
 
-# $install_dir will automatically be initialized with some decent 
+# $install_dir will automatically be initialized with some decent
+
 # permission by default ... however, you may need to recursively reapply
 # ownership to all files such as after the ynh_setup_source step
-
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
-ynh_script_progression --message="Upgrading system configurations related to $app..." --weight=1
+ynh_script_progression "Upgrading system configurations related to $app..."
 
 # This should be a literal copypasta of what happened in the install's "System configuration" section
 
-ynh_add_nginx_config
+ynh_config_add_nginx
 
 #=================================================
 # RECONFIGURE THE APP (UPDATE CONF, APPLY MIGRATIONS, ...)
 #=================================================
 # UPDATE A CONFIG FILE
 #=================================================
-ynh_script_progression --message="Updating a configuration file..." --weight=1
+ynh_script_progression "Updating configuration..."
 users_list=$(ynh_user_list)
 
 for u in $users_list
@@ -102,9 +94,8 @@ for u in $users_list
 		create_user $u
 	done
 
-
 #=================================================
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Upgrade of $app completed" --last
+ynh_script_progression "Upgrade of $app completed"

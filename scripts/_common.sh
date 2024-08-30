@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #=================================================
-# COMMON VARIABLES
+# COMMON VARIABLES AND CUSTOM HELPERS
 #=================================================
 # données utilisateur: utilisé aussi dans nginx.conf
 chemin_utilisateurs='/home/yunohost.multimedia'
@@ -9,11 +9,6 @@ chemin_utilisateurs='/home/yunohost.multimedia'
 # données issues de manifest.toml
 #   $domain
 #   $path=
-
-#=================================================
-# PERSONAL HELPERS
-#=================================================
-
 
 create_user () {
 #ynh_print_info "Entrée dans create_user"
@@ -23,17 +18,21 @@ local URL_webdav=$domain$path
 local page_contents=''
 
 if [[ ! (-d "$chemin_utilisateurs/$user" ) ]]
-  then 
+  then
+
     echo répertoire $chemin_utilisateurs/$user : inexistant
     return
 
 fi
 
-# syntaxe here-doc: 
-#     EOPAGE est e delimiteur. 
+# syntaxe here-doc:
+
+#     EOPAGE est e delimiteur.
+
 # commande en début de ligne: préférer cat à écho car echo ne travaille pas avec les pipe
 # redirection vers le fichier en première ligne du here-doc
-cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html 
+cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -115,11 +114,10 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
     <br>
     </h3>
 
+    <p>En cas de souci, rendez-vous sur
 
-    <p>En cas de souci, rendez-vous sur 
         <a href="https://github.com/YunoHost-Apps/my_webdav_ynh">my_Webdav_ynh</a>.
     </p>
-
 
   <div class="ynh-wrapper footer"><nav>
     <a class="link-profile-edit" href="edit.html">Éditer mon profil</a>
@@ -134,28 +132,20 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
   <script src="assets/js/ynh_portal.js"></script>
   <script src="assets/themes/default/custom_portal.js"></script>
 
-
 </body>
 </html>
 
 EOPAGE
 }
 
-
 remove_user() {
 
 local user=$1
 
  if [[ (-f "$chemin_utilisateurs/$user/index.html" ) ]]
-  then 
+  then
+
     rm -f $chemin_utilisateurs/$user/index.html
 fi
 
 }
-#=================================================
-# EXPERIMENTAL HELPERS
-#=================================================
-
-#=================================================
-# FUTURE OFFICIAL HELPERS
-#=================================================

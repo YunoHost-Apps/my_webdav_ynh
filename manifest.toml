@@ -15,7 +15,8 @@ license = "GPL-3.0-only"
 code = "https://github.com/YunoHost-Apps/my_webdav_ynh"
 
 [integration]
-yunohost = ">= 11.2.0"
+yunohost = ">= 11.2.18"
+helpers_version = "2.1"
 architectures = "all"
 multi_instance = false
 ldap = false
@@ -47,6 +48,7 @@ ram.runtime = "100K"
     # of explanation regarding the behavior and properties for each of those
 
     # [resources.install_dir]
+ group = "www-data:r-x"
     # This will create/remove the install dir as /var/www/$app
     # and store the corresponding setting $install_dir
 
