@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
 source _common.sh
 source /usr/share/yunohost/helpers
 
@@ -26,18 +20,19 @@ source /usr/share/yunohost/helpers
 # ...
 
 #
-# $app is the app id (i.e. 'example' for first install, 
+# $app is the app id (i.e. 'example' for first install,
+
 # or 'example__2', '__3', ... for multi-instance installs)
 #
 
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding system configurations related to $app ..." --weight=1
+ynh_script_progression "Adding system configurations related to $app ..."
 
-### `ynh_add_fpm_config` is used to set up a PHP config.
+### `ynh_config_add_phpfpm` is used to set up a PHP config.
 ### You can remove it if your app doesn't use PHP.
-### `ynh_add_fpm_config` will use the files conf/php-fpm.conf
+### `ynh_config_add_phpfpm` will use the files conf/php-fpm.conf
 ### If you're not using these lines:
 ###		- You can remove these files in conf/.
 ###		- Remove the section "BACKUP THE PHP-FPM CONFIGURATION" in the backup script
@@ -47,7 +42,7 @@ ynh_script_progression --message="Adding system configurations related to $app .
 ###		- And the section "PHP-FPM CONFIGURATION" in the upgrade script
 
 # Create a dedicated NGINX config using the conf/nginx.conf template
-ynh_add_nginx_config
+ynh_config_add_nginx
 
 #=================================================
 # TEMP DIRECTORY CREATION
@@ -65,14 +60,14 @@ ynh_add_nginx_config
 # néanmoins, lors du test par package_checker, ce répertoire semble ne pas être systématiquement présent.
 # il faut donc le créer s'il n'existe pas
 if [[ !(-d "$chemin_utilisateurs") ]]
-  then 
+  then
+
    ynh_multimedia_build_main_dir
 fi
 
 # puis on ajoute www-data au groupe multimedia pour donner accès en http (protocole webdav)
 # si multimedia n'existe pas, yunohost le créera
 ynh_multimedia_addaccess www-data
-
 
 # attention, sur ma version, les répertoires sous /home/yunohost.multimedia ne sont pas dans le groupe "multimedia".
 #  Il faut rectifier car le protocole webdav utilise le groupe www-data pour écrire en protocole http dans les répertoires
@@ -84,8 +79,8 @@ for u in $users_list
 	do
 		create_user $u
 	done
- 
+
 #=================================================
 # END OF SCRIPT
 #=================================================
-ynh_script_progression --message="Installation of $app completed" --last
+ynh_script_progression "Installation of $app completed"
