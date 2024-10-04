@@ -30,7 +30,7 @@ will be stored, on the server, in the path of the connected user: **/home/yunosh
 
 
 
-**Versión actual:** 1.2~ynh1
+**Versión actual:** 1.2~ynh2
 ## Documentaciones y recursos
 
 - Repositorio del código fuente oficial de la aplicación : <https://github.com/YunoHost-Apps/my_webdav_ynh>
@@ -39,7 +39,7 @@ will be stored, on the server, in the path of the connected user: **/home/yunosh
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/my_webdav_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/my_webdav_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
