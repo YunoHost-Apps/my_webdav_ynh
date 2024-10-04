@@ -29,8 +29,8 @@ This application gives access to your Yunohost server with Webdav protocol
 will be stored, on the server, in the path of the connected user: **/home/yunoshot.multimedia/user**
 
 
-**Geleverde versie:** 1.2~ynh2
 
+**Geleverde versie:** 1.2~ynh2
 ## Documentatie en bronnen
 
 - Upstream app codedepot: <https://github.com/YunoHost-Apps/my_webdav_ynh>
