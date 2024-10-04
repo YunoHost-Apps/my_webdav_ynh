@@ -30,7 +30,7 @@ will be stored, on the server, in the path of the connected user: **/home/yunosh
 
 
 
-**分发版本：** 1.2~ynh1
+**分发版本：** 1.2~ynh2
 ## 文档与资源
 
 - 上游应用代码库： <https://github.com/YunoHost-Apps/my_webdav_ynh>
