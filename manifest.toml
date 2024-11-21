@@ -61,4 +61,6 @@ ram.runtime = "100K"
     # The initial allowed group of user is configured via the init_main_permission question (public=visitors, private=all_users)
     main.url = "/"
     main.allowed = "all_users"
+    main.auth_header = "true"
+    main.protected = "true"
 	
