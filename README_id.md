@@ -30,7 +30,7 @@ will be stored, on the server, in the path of the connected user: **/home/yunosh
 
 
 
-**Versi terkirim:** 1.2~ynh2
+**Versi terkirim:** 1.2~ynh3
 ## Dokumentasi dan sumber daya
 
 - Depot kode aplikasi hulu: <https://github.com/YunoHost-Apps/my_webdav_ynh>

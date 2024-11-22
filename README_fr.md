@@ -30,7 +30,7 @@ sera stocké sur le serveur dans le chemin de l''utilisateur connecté **/home/y
 
 
 
-**Version incluse :** 1.2~ynh2
+**Version incluse :** 1.2~ynh3
 ## Documentations et ressources
 
 - Dépôt de code officiel de l’app : <https://github.com/YunoHost-Apps/my_webdav_ynh>
