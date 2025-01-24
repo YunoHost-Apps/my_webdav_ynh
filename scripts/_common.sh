@@ -35,7 +35,7 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
 <head>
     <meta charset="utf-8">
     <base href="https://$domain/yunohost/sso/" target="_blank">
-    <title>My_Webdav Yunohost</title>
+    <title>My_Webdav YunoHost</title>
 
   <!-- Responsive -->
   <meta name="format-detection" content="telephone=no" />
@@ -88,21 +88,21 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
 
 <div class="messages">
 
-	<h1>Serveur My_Webdav sur Yunohost
+	<h1>Serveur My_Webdav sur YunoHost
     </h1>
 
-	<h2>Si vous voyez cette page, c&rsquo;est que la configuration du Webdav devrait fonctionner
+	<h2>Si vous voyez cette page, c&rsquo;est que la configuration du WebDAV devrait fonctionner
     </h2>
 
-    <h3>Vous pouvez d&eacute;sormais vous connecter &agrave; votre serveur Webdav
+    <h3>Vous pouvez d&eacute;sormais vous connecter &agrave; votre serveur WebDAV
     </h3>
     <p class="form-text"> URL : https://$URL_webdav</p>
     <br>
     <br>
 
-    <h3>Utilisez votre         <label class="control-label">Nom d&rsquo;utilisateur Yunohost </label>
+    <h3>Utilisez votre         <label class="control-label">Nom d&rsquo;utilisateur YunoHost </label>
         <br>
-        et votre <label class="control-label">mot de passe Yunohost </label>pour vous authentifier
+        et votre <label class="control-label">mot de passe YunoHost </label>pour vous authentifier
     <br>
     </h3>
 
