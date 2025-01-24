@@ -3,55 +3,12 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
-# Install parameters are automatically saved as settings
-#
-# Settings are automatically loaded as bash variables
-# in every app script context, therefore typically these will exist:
-# - $domain
-# - $path
-# - $language
-# ... etc
-#
-# Resources defined in the manifest are provisioned prior to this script
-# and corresponding settings are also available, such as:
-# - $install_dir
-# - $port
-# - $db_name
-# ...
-
-#
-# $app is the app id (i.e. 'example' for first install,
-
-# or 'example__2', '__3', ... for multi-instance installs)
-#
-
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Adding system configurations related to $app ..."
 
-### `ynh_config_add_phpfpm` is used to set up a PHP config.
-### You can remove it if your app doesn't use PHP.
-### `ynh_config_add_phpfpm` will use the files conf/php-fpm.conf
-### If you're not using these lines:
-###		- You can remove these files in conf/.
-###		- Remove the section "BACKUP THE PHP-FPM CONFIGURATION" in the backup script
-###		- Remove also the section "REMOVE PHP-FPM CONFIGURATION" in the remove script
-###		- As well as the section "RESTORE THE PHP-FPM CONFIGURATION" in the restore script
-###		  with the reload at the end of the script.
-###		- And the section "PHP-FPM CONFIGURATION" in the upgrade script
-
-# Create a dedicated NGINX config using the conf/nginx.conf template
 ynh_config_add_nginx
-
-#=================================================
-# TEMP DIRECTORY CREATION
-#=================================================
-# remplacé par directive subdir dans le manifest.toml
-# code précédent:
-# 	webdav_temp_dir=$install_dir_temp
-# 	mkdir -p "$webdav_temp_dir"
-# 	chown -R www-data:www-data "$webdav_temp_dir"
 
 #=================================================
 # USERS' DIRECTORY CREATION
@@ -61,7 +18,6 @@ ynh_config_add_nginx
 # il faut donc le créer s'il n'existe pas
 if [[ !(-d "$chemin_utilisateurs") ]]
   then
-
    ynh_multimedia_build_main_dir
 fi
 
@@ -83,4 +39,5 @@ for u in $users_list
 #=================================================
 # END OF SCRIPT
 #=================================================
+
 ynh_script_progression "Installation of $app completed"

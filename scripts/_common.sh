@@ -3,12 +3,9 @@
 #=================================================
 # COMMON VARIABLES AND CUSTOM HELPERS
 #=================================================
+
 # données utilisateur: utilisé aussi dans nginx.conf
 chemin_utilisateurs='/home/yunohost.multimedia'
-
-# données issues de manifest.toml
-#   $domain
-#   $path=
 
 create_user () {
 #ynh_print_info "Entrée dans create_user"

@@ -2,8 +2,8 @@ packaging_format = 2
 
 id = "my_webdav"
 name = "My Webdav"
-description.en = "Configure your own Webdav server"
-description.fr = "Configuration d'un serveur Webdav"
+description.en = "Configure your own WebDAV server"
+description.fr = "Configuration d'un serveur WebDAV"
 
 version = "1.2~ynh3"
 
@@ -14,12 +14,14 @@ license = "GPL-3.0-only"
 code = "https://github.com/YunoHost-Apps/my_webdav_ynh"
 
 [integration]
-yunohost = ">= 11.2.18"
+yunohost = ">= 12.0.9"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = false
+
 ldap = false
 sso = true
+
 disk = "1M"
 ram.build = "100K"
 ram.runtime = "100K"
@@ -32,22 +34,7 @@ ram.runtime = "100K"
     type = "path"
     default = "/my_webdav"
 
-    #[install.init_main_permission]
-    # installation obligatoire en privé pour all_users. Voir ci-dessous dans [resources.permissions]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    # This won't be saved as setting and will instead be used to initialize the SSOwat permission
-    #type = "group"
-    #default = "all_users"
-
 [resources]
-	# see https://yunohost.org/fr/packaging_apps_resources
-    # See the packaging documentation for the full set
-    # of explanation regarding the behavior and properties for each of those
-
-    # [resources.install_dir]
-    #group = "www-data:r-x"
-    # This will create/remove the install dir as /var/www/$app
-    # and store the corresponding setting $install_dir
 
     [resources.data_dir]
     # ATTENTION: risque de dysfonctionnement si le répertoire temporaire n'a pa l'accès en "rwx"

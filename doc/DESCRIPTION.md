@@ -1,4 +1,4 @@
-This application gives access to your Yunohost server with Webdav protocol
+This application gives access to your YunoHost server with Webdav protocol
 
 ### Features
 
@@ -11,7 +11,7 @@ This application gives access to your Yunohost server with Webdav protocol
 will be stored, on the server, in the path of the connected user: **/home/yunoshot.multimedia/user**
 
 ### Compatibility
-This version is dedicated to Yunohost 12 or newer
-For a Yunohost 11, please use command line:  
+This version is dedicated to YunoHost 12 or newer
+For a YunoHost 11, please use command line:  
 `yunohost app install https://github.com/yunohost-apps/my_webdav_ynh/tree/master_YUNOHOST_11_Bullseye`
 
