@@ -45,6 +45,6 @@ ram.runtime = "100K"
     [resources.permissions]
     main.url = "/"
     main.allowed = "all_users"
-    main.auth_header = "true"
-    main.protected = "true"
+    main.auth_header = true
+    main.protected = true
 	
