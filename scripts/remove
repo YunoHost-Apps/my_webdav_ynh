@@ -1,24 +1,19 @@
 #!/bin/bash
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
 source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
 # REMOVE SYSTEM CONFIGURATIONS
 #=================================================
-ynh_script_progression --message="Removing system configurations related to $app..." --weight=1
+ynh_script_progression "Removing system configurations related to $app..."
 
-ynh_remove_nginx_config
+ynh_config_remove_nginx
 
 #=================================================
-# REMOVE DATAs 
+# REMOVE DATAs
 #=================================================
+
 users_list=$(ynh_user_list)
 for u in $users_list
 	do
@@ -29,4 +24,4 @@ for u in $users_list
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Removal of $app completed" --last
+ynh_script_progression "Removal of $app completed"

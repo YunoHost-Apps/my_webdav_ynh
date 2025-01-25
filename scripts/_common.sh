@@ -1,19 +1,11 @@
 #!/bin/bash
 
 #=================================================
-# COMMON VARIABLES
+# COMMON VARIABLES AND CUSTOM HELPERS
 #=================================================
+
 # données utilisateur: utilisé aussi dans nginx.conf
 chemin_utilisateurs='/home/yunohost.multimedia'
-
-# données issues de manifest.toml
-#   $domain
-#   $path=
-
-#=================================================
-# PERSONAL HELPERS
-#=================================================
-
 
 create_user () {
 #ynh_print_info "Entrée dans create_user"
@@ -23,23 +15,27 @@ local URL_webdav=$domain$path
 local page_contents=''
 
 if [[ ! (-d "$chemin_utilisateurs/$user" ) ]]
-  then 
+  then
+
     echo répertoire $chemin_utilisateurs/$user : inexistant
     return
 
 fi
 
-# syntaxe here-doc: 
-#     EOPAGE est e delimiteur. 
+# syntaxe here-doc:
+
+#     EOPAGE est e delimiteur.
+
 # commande en début de ligne: préférer cat à écho car echo ne travaille pas avec les pipe
 # redirection vers le fichier en première ligne du here-doc
-cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html 
+cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <base href="https://$domain/yunohost/sso/" target="_blank">
-    <title>My_Webdav Yunohost</title>
+    <title>My_Webdav YunoHost</title>
 
   <!-- Responsive -->
   <meta name="format-detection" content="telephone=no" />
@@ -92,21 +88,21 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
 
 <div class="messages">
 
-	<h1>Serveur My_Webdav sur Yunohost
+	<h1>Serveur My_Webdav sur YunoHost
     </h1>
 
-	<h2>Si vous voyez cette page, c&rsquo;est que la configuration du Webdav devrait fonctionner
+	<h2>Si vous voyez cette page, c&rsquo;est que la configuration du WebDAV devrait fonctionner
     </h2>
 
-    <h3>Vous pouvez d&eacute;sormais vous connecter &agrave; votre serveur Webdav
+    <h3>Vous pouvez d&eacute;sormais vous connecter &agrave; votre serveur WebDAV
     </h3>
     <p class="form-text"> URL : https://$URL_webdav</p>
     <br>
     <br>
 
-    <h3>Utilisez votre         <label class="control-label">Nom d&rsquo;utilisateur Yunohost </label>
+    <h3>Utilisez votre         <label class="control-label">Nom d&rsquo;utilisateur YunoHost </label>
         <br>
-        et votre <label class="control-label">mot de passe Yunohost </label>pour vous authentifier
+        et votre <label class="control-label">mot de passe YunoHost </label>pour vous authentifier
     <br>
     </h3>
 
@@ -115,11 +111,10 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
     <br>
     </h3>
 
+    <p>En cas de souci, rendez-vous sur
 
-    <p>En cas de souci, rendez-vous sur 
         <a href="https://github.com/YunoHost-Apps/my_webdav_ynh">my_Webdav_ynh</a>.
     </p>
-
 
   <div class="ynh-wrapper footer"><nav>
     <a class="link-profile-edit" href="edit.html">Éditer mon profil</a>
@@ -134,28 +129,20 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
   <script src="assets/js/ynh_portal.js"></script>
   <script src="assets/themes/default/custom_portal.js"></script>
 
-
 </body>
 </html>
 
 EOPAGE
 }
 
-
 remove_user() {
 
 local user=$1
 
  if [[ (-f "$chemin_utilisateurs/$user/index.html" ) ]]
-  then 
+  then
+
     rm -f $chemin_utilisateurs/$user/index.html
 fi
 
 }
-#=================================================
-# EXPERIMENTAL HELPERS
-#=================================================
-
-#=================================================
-# FUTURE OFFICIAL HELPERS
-#=================================================
