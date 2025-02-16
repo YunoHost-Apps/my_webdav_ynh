@@ -36,7 +36,7 @@ Pour Yunohost 11, utilisez la ligne de commande :
 `yunohost app install https://github.com/yunohost-apps/my_webdav_ynh/tree/master_YUNOHOST_11_Bullseye`
 
 
-**Version incluse :** 1.2~ynh3
+**Version incluse :** 1.3~ynh3
 ## Documentations et ressources
 
 - Dépôt de code officiel de l’app : <https://github.com/YunoHost-Apps/my_webdav_ynh>
