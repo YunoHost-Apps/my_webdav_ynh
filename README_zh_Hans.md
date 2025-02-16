@@ -37,7 +37,7 @@ For a Yunohost 11, please use command line:
 
 
 
-**分发版本：** 1.2~ynh3
+**分发版本：** 1.3~ynh3
 ## 文档与资源
 
 - 上游应用代码库： <https://github.com/YunoHost-Apps/my_webdav_ynh>
