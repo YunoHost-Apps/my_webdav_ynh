@@ -5,8 +5,7 @@ name = "My Webdav"
 description.en = "Configure your own Webdav server"
 description.fr = "Configuration d'un serveur Webdav"
 
-version = "1.2~ynh2"
-
+version = "1.2~ynh3"
 
 maintainers = ["marc_flender"]
 
@@ -26,11 +25,9 @@ ram.runtime = "100K"
 
 [install]
     [install.domain]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "domain"
 
     [install.path]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "path"
     default = "/my_webdav"
 
@@ -42,23 +39,14 @@ ram.runtime = "100K"
     #default = "all_users"
 
 [resources]
-	# see https://yunohost.org/fr/packaging_apps_resources
-    # See the packaging documentation for the full set
-    # of explanation regarding the behavior and properties for each of those
-
-    # [resources.install_dir]
-    # This will create/remove the install dir as /var/www/$app
-    # and store the corresponding setting $install_dir
 
     [resources.data_dir]
     # ATTENTION: risque de dysfonctionnement si le répertoire temporaire n'a pa l'accès en "rwx"
-    subdirs = ['tmp']    
+    subdirs = ['tmp']
     owner = "www-data:rwx"
     group= "www-data:rwx"
 
     [resources.permissions]
-    # This will configure SSOwat permission for $domain/$path/
-    # The initial allowed group of user is configured via the init_main_permission question (public=visitors, private=all_users)
     main.url = "/"
     main.allowed = "visitors" #replaces all_users because of problems of access since Yunohost_12
     main.auth_header = "true"
