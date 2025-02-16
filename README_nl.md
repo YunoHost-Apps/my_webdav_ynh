@@ -30,6 +30,11 @@ This application gives access to your Yunohost server with Webdav protocol
 * NB2: the file myfile, in  **https://domain-name/my_webdav/myfile**
 will be stored, on the server, in the path of the connected user: **/home/yunoshot.multimedia/user**
 
+### Compatibility
+This version is dedicated to Yunohost 12 or newer
+For a Yunohost 11, please use command line:  
+`yunohost app install https://github.com/yunohost-apps/my_webdav_ynh/tree/master_YUNOHOST_11_Bullseye`
+
 
 
 **Geleverde versie:** 1.2~ynh3
