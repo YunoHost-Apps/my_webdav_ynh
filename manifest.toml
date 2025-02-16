@@ -14,7 +14,7 @@ license = "GPL-3.0-only"
 code = "https://github.com/YunoHost-Apps/my_webdav_ynh"
 
 [integration]
-yunohost = ">= 11.2.0"
+yunohost = ">= 12.0.0"
 architectures = "all"
 multi_instance = false
 ldap = false
@@ -32,7 +32,7 @@ ram.runtime = "100K"
     default = "/my_webdav"
 
     #[install.init_main_permission]
-    # installation obligatoire en privé pour all_users. Voir ci-dessous dans [resources.permissions]
+    # installation en public sinon dysfonctionnement depuis Yunohost12. Voir ci-dessous dans [resources.permissions]
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     # This won't be saved as setting and will instead be used to initialize the SSOwat permission
     #type = "group"
@@ -48,7 +48,7 @@ ram.runtime = "100K"
 
     [resources.permissions]
     main.url = "/"
-    main.allowed = "all_users"
+    main.allowed = "visitors" #replaces all_users because of problems of access since Yunohost_12
     main.auth_header = "true"
     main.protected = "true"
 	

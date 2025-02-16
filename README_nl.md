@@ -5,7 +5,9 @@ Hij mag NIET handmatig aangepast worden.
 
 # My Webdav voor Yunohost
 
-[![Integratieniveau](https://dash.yunohost.org/integration/my_webdav.svg)](https://ci-apps.yunohost.org/ci/apps/my_webdav/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/my_webdav.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/my_webdav.maintain.svg)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/my_webdav)](https://ci-apps.yunohost.org/ci/apps/my_webdav/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/my_webdav)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/my_webdav)
 
 [![My Webdav met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
 
