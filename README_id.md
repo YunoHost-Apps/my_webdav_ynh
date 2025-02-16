@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # My Webdav untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/my_webdav.svg)](https://ci-apps.yunohost.org/ci/apps/my_webdav/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/my_webdav.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/my_webdav.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/my_webdav)](https://ci-apps.yunohost.org/ci/apps/my_webdav/)
+![Status kerja](https://apps.yunohost.org/badge/state/my_webdav)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/my_webdav)
 
 [![Pasang My Webdav dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
 

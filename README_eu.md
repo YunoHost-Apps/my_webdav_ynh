@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # My Webdav YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/my_webdav.svg)](https://ci-apps.yunohost.org/ci/apps/my_webdav/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/my_webdav.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/my_webdav.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/my_webdav)](https://ci-apps.yunohost.org/ci/apps/my_webdav/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/my_webdav)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/my_webdav)
 
 [![Instalatu My Webdav YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
 

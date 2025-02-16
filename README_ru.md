@@ -5,7 +5,9 @@
 
 # My Webdav для YunoHost
 
-[![Уровень интеграции](https://dash.yunohost.org/integration/my_webdav.svg)](https://ci-apps.yunohost.org/ci/apps/my_webdav/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/my_webdav.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/my_webdav.maintain.svg)
+[![Уровень интеграции](https://apps.yunohost.org/badge/integration/my_webdav)](https://ci-apps.yunohost.org/ci/apps/my_webdav/)
+![Состояние работы](https://apps.yunohost.org/badge/state/my_webdav)
+![Состояние сопровождения](https://apps.yunohost.org/badge/maintained/my_webdav)
 
 [![Установите My Webdav с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
 
