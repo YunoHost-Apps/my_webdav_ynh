@@ -5,7 +5,7 @@ name = "My Webdav"
 description.en = "Configure your own Webdav server"
 description.fr = "Configuration d'un serveur Webdav"
 
-version = "1.2~ynh3"
+version = "1.3~ynh3"
 
 maintainers = ["marc_flender"]
 
