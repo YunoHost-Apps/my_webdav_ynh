@@ -49,6 +49,6 @@ ram.runtime = "100K"
     [resources.permissions]
     main.url = "/"
     main.allowed = "visitors" #replaces all_users because of problems of access since Yunohost_12
-    main.auth_header = "true"
-    main.protected = "true"
+    main.auth_header = true
+    main.protected = true
 	
