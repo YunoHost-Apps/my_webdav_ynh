@@ -35,8 +35,6 @@ This version is dedicated to Yunohost 12 or newer
 For a Yunohost 11, please use command line:  
 `yunohost app install https://github.com/yunohost-apps/my_webdav_ynh/tree/master_YUNOHOST_11_Bullseye`
 
-
-
 **Shipped version:** 1.3~ynh3
 ## Documentation and resources
 

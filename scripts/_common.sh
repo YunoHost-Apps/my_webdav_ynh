@@ -81,13 +81,6 @@ cat <<EOPAGE >   $chemin_utilisateurs/$user/index.html
   <ul class="user-menu">
     <li><a id="ynh-logout" class="icon icon-connexion" href="?action=logout">Déconnexion</a></li>
   </ul>
-
-  <a class="user-container user-container-info" href="edit.html">
-    <h2 class="user-username">marc</h2>
-    <small class="user-fullname">Marc Flender</small>
-    <span class="user-mail">marc@famille-flender.fr</span>
-  </a>
-
 </div>
 
 <div class="messages">
