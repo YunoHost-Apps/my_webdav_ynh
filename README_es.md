@@ -37,7 +37,7 @@ For a Yunohost 11, please use command line:
 
 
 
-**Versión actual:** 1.2~ynh3
+**Versión actual:** 1.3~ynh3
 ## Documentaciones y recursos
 
 - Repositorio del código fuente oficial de la aplicación : <https://github.com/YunoHost-Apps/my_webdav_ynh>
