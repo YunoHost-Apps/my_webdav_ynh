@@ -2,7 +2,7 @@ Cette application permet d'accéder à votre instance Yunohost avec le protocole
 
 ### Caractéristiques
 
-* authentification nécessaire avec les identifiants Yunohost
+* authentification nécessaire avec les identifiants YunoHost
 	* User
 	* password
 * accès au répertoire Webdav avec  l'URL: https://domain-name/my_webdav

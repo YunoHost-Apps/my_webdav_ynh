@@ -2,10 +2,10 @@ packaging_format = 2
 
 id = "my_webdav"
 name = "My Webdav"
-description.en = "Configure your own Webdav server"
-description.fr = "Configuration d'un serveur Webdav"
+description.en = "Configure your own WebDAV server"
+description.fr = "Configuration d'un serveur WebDAV"
 
-version = "1.3~ynh3"
+version = "1.3~ynh4"
 
 maintainers = ["marc_flender"]
 
@@ -14,11 +14,14 @@ license = "GPL-3.0-only"
 code = "https://github.com/YunoHost-Apps/my_webdav_ynh"
 
 [integration]
-yunohost = ">= 12.0.0"
+yunohost = ">= 12.1.18"
+helpers_version = "2.1"
 architectures = "all"
 multi_instance = false
+
 ldap = false
 sso = true
+
 disk = "1M"
 ram.build = "100K"
 ram.runtime = "100K"
@@ -51,4 +54,3 @@ ram.runtime = "100K"
     main.allowed = "visitors" #replaces all_users because of problems of access since Yunohost_12
     main.auth_header = true
     main.protected = true
-	
