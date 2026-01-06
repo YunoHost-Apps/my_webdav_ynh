@@ -14,7 +14,7 @@ license = "GPL-3.0-only"
 code = "https://github.com/YunoHost-Apps/my_webdav_ynh"
 
 [integration]
-yunohost = ">= 12.0.9"
+yunohost = ">= 12.1.18"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = false
