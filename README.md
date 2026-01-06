@@ -5,7 +5,9 @@ It shall NOT be edited by hand.
 
 # My Webdav for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/my_webdav.svg)](https://ci-apps.yunohost.org/ci/apps/my_webdav/) ![Working status](https://ci-apps.yunohost.org/ci/badges/my_webdav.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/my_webdav.maintain.svg)
+[![Integration level](https://apps.yunohost.org/badge/integration/my_webdav)](https://ci-apps.yunohost.org/ci/apps/my_webdav/)
+![Working status](https://apps.yunohost.org/badge/state/my_webdav)
+![Maintenance status](https://apps.yunohost.org/badge/maintained/my_webdav)
 
 [![Install My Webdav with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=my_webdav)
 
@@ -35,7 +37,7 @@ For a Yunohost 11, please use command line:
 
 
 
-**Shipped version:** 1.2~ynh3
+**Shipped version:** 1.3~ynh3
 ## Documentation and resources
 
 - Upstream app code repository: <https://github.com/YunoHost-Apps/my_webdav_ynh>
